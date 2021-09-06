@@ -6,20 +6,21 @@ const sumAll = function(startNum, endNum) {
     let isArrayEnd = Array.isArray(endNum);
     let isStringStart = typeof startNum;
     let isStringEnd = typeof endNum;
-
-    if ((isStringEnd || isStringStart) === "string"){
+    if ((isStringStart === "string") || (isStringEnd === "string")){
         return 'ERROR';
-    }else if ((endNumTest || startNumTest) === false){
+    }else if
+        ((endNumTest === false) || (startNumTest === false)){
         return 'ERROR';
-    }
-    else if (((startNum || endNum) === NaN ) ||
-        ((startNum || endNum) < 0) ||
-        ((isArrayStart || isArrayEnd) === true)){
+    }else if
+        (((startNum === NaN) || (endNum === NaN) ||
+        ((startNum < 0) || (endNum < 0) ||
+        ((isArrayStart === true) || (isArrayEnd === true))))){
         return 'ERROR';
-    }else if (endNum < startNum){
-        a = endNum;
-        endNum = startNum;
-        startNum = a;
+    }else if
+            (endNum < startNum){
+            a = endNum;
+            endNum = startNum;
+            startNum = a;
         for (i = 0; i < endNum; i++){
             sumNums += startNum;
             startNum++;
@@ -29,8 +30,5 @@ const sumAll = function(startNum, endNum) {
             sumNums += startNum;
             startNum++;
         }return sumNums;
-
-
 };
-
 module.exports = sumAll;
