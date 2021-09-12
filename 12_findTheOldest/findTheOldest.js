@@ -1,5 +1,4 @@
 const findTheOldest = function(people) {
-    const person = people.map(people => people.name);
     const birthYear = people.map(people => people.yearOfBirth);
     const deathYear = people.map(people => people.yearOfDeath);
     let age = new Array;
