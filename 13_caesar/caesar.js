@@ -18,12 +18,13 @@ const caesar = function (inputString, modNumber) {
             finalWord = finalWord + charString;
         } else if (inputString.charCodeAt(i) >= 65) {
             //doesnt allow uppercase letters to become lowercase
-            //and viseversa
             if (inputString.charCodeAt(i) >= 65 &&
                 inputString.charCodeAt(i) <= 90 &&
                 (inputString.charCodeAt(i) + modNumber) > 90) {
-                charCodeNumber = (inputString.charCodeAt(i) + modNumber - 26)
-            } else charCodeNumber = (inputString.charCodeAt(i) + modNumber)
+                charCodeNumber = (inputString.charCodeAt(i) +
+                    modNumber - 26)
+            } else charCodeNumber = (inputString.charCodeAt(i) +
+                    modNumber)
             //only allows uppercase letters
             if (charCodeNumber >= 90 && charCodeNumber <= 97) {
                 charCodeNumber = charCodeNumber - 26;
